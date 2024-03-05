@@ -1,0 +1,31 @@
+ <h1> Available Train </h1>
+
+  <table id="customers">
+    <thead>
+      <tr>
+        <th>from</th>
+        <th>Departure Time</th>
+        <th>to </th>
+        <th>Arriwal Time</th>         
+        <th>total Distance</th>
+        <th>fair price</th>       
+        <th>Book Ticket</th>
+      </tr> 
+    </thead>
+    <tbody>
+      <tr>
+        <td><%=@from %></td>
+        <td><%=@departure%></td>
+        <td><%=@to %></td>
+        <td><%=@arrival%></td> 
+        <td> <%= @total_distance %> KM</td>
+        <td> <%= @fairprice %></td>
+         
+        <td><%=link_to "book ticket", new_route_ticket_path(@route.id)%></td>
+    </tbody>
+  </table> 
+  <br><br>
+
+
+
+
